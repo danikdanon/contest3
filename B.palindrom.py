@@ -11,6 +11,7 @@ def single_centre(centre, s):
     else:
         return 10000
 
+
 def double_centre(centre, s):
     d = 1
     ans = 1
@@ -24,11 +25,12 @@ def double_centre(centre, s):
     else:
         return 10000
 
+
 s = input()
 ans = len(s)-1
 
 for centre in range(len(s)):
-    ans = min(ans,single_centre(centre, s))
+    ans = min(ans, single_centre(centre, s))
     if centre < len(s) - 1 and s[centre] == s[centre+1]:
         ans = min(ans, double_centre(centre, s))
 
